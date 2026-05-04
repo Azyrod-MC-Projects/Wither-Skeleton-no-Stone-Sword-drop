@@ -2,6 +2,6 @@
 	"pack": {
 		"description": "Prevents Wither Skeletons to drop Stone Swords on death",
     	"min_format": 88,
-    	"max_format": [94, 1]
+    	"max_format": [101, 1]
 	}
 }
