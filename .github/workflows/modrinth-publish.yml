@@ -1,0 +1,28 @@
+name: Publish on Modrinth
+on:
+  release:
+    types: [published]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+    steps:
+      - name: Checkout Repository
+        uses: actions/checkout@v3
+
+      - name: Build
+        run: |
+          mkdir build
+          zip -r "build/Wither Skeleton no Stone Sword drop.zip" data/ pack.mcmeta
+
+      - uses: Kir-Antipov/mc-publish@v3.3
+        with:
+          modrinth-id: ${{ vars.MODRINTH_PROJECT_ID }}
+          modrinth-token: ${{ secrets.MODRINTH_TOKEN }}
+
+          github-token: ${{ secrets.GITHUB_TOKEN }}
+
+          files: |
+            build/*.zip
