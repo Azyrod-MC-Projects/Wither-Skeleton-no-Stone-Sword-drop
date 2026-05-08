@@ -10,7 +10,7 @@ Note that if a Wither Skeleton was to pickup a sword dropped by a player (say yo
 
 # Performances
 
-This datapack has been optimized to have minimal impact on performances, logic is run every 1s and only runs on Wither Skeletons in the Nether Dimension and marks already checked skeletons with a tag to no re-process them. 
+This datapack has been optimized to have minimal impact on performances, logic is run every 1s and only runs on Wither Skeletons in the Nether Dimension and marks already checked skeletons with a tag to not re-process them. 
 
 # Issues / Bugs
 Feel free to report issues on the Github project page.
